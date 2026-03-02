@@ -1,0 +1,45 @@
+-> What is Class?
+    - Class is a name group of property of functions.
+    - Class name by convention is Capitalised.
+    - Class is Logical Construct, a blue print.
+
+-> What is Objects?
+    - Object is the instance of the class.
+    - It is something that actually accommodates some memory.
+    - it is a physical thing.
+
+-> "new" keywords
+    - The keyword is used to make Objects.
+    - Dynamically allocates memory and return a reference to it.
+
+-> One of the Most important concept...
+    - If lets say I have a class named Student ( See the Implementations as well ).
+    - inside that class I have default rollNumber = 56
+    - and in the Main Class I will set Roll Number to 36.
+      which roll number will be stored?
+      One that has set to Main Class..
+      if it would have been null in that case it would have shown the roll number that is inside the *Parent Class*.
+
+-> "this" keywords
+    - It is like a placeholder for object.
+
+-> Why Primitives are not initialised with "new" keywords?
+    - They are not because they are directly stored in stack memory and it makes java more faster
+
+-> If
+    Class a = new Class();
+    Class b = a;
+    will changes made in a will also change that property in b?
+
+    yes! because both of them internally are point towards the same object
+
+-> Final keyword
+    - final don't allow to change / modify object.
+    - it only works for primitive
+    - if
+        final int a = 10;
+        a = 100 (This is going to create error)
+
+        final Student kush = new Student("Alex");
+        kush.name = "Kush Makwana"; ( this is allowed )
+        kush = new Student("Amrut"); ( this is not )
