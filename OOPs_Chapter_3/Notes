@@ -1,0 +1,108 @@
+-> Inheritance
+    - Lets understand this w one single example
+        - Every child take some properties from their parents... This properties includes looks, values and you can also say this parents can pass their money, properties and other similar physical things to their child
+
+        if a car is own by a person, his / her kid can also use it
+
+        this is called as inheriting.. child is inheriting properties from parents
+
+        - with this same example we will understand java inheritance.. We have a parent class and this class have certain properties in terms of methods, variables etc... when we make child class inheriting this parent class, all the methods in parent class becomes available by children
+
+    - Super Keywords
+        - Use to call / initialising parent class constructor
+        - It is only use to access the constructor that is right above the child class
+        - To use Super class key words following the condition
+            - 1st Super keywords is use to initialize the values of parent class by calling the constructor soo there should exist that particular constructor
+
+            class Parent{
+                Parent( property a, property b ){
+                    // Some Code
+                }
+            }
+
+            class Child{
+                // this is correct
+                Child( property a, property b, property c ){
+                    super( a, b );
+                }
+
+                // this is not allowed because there is no constructor with only property a
+                Child ( property a, property c ){
+                    super( a );
+                    this.c = xyz;
+                }
+            }
+
+    - Type of the Reference Variable that determine which all methods you can access
+
+        assume I have a class named parents
+            class Parents {
+                method 1
+                method 2
+            }
+
+            class Child {
+                method 3
+                method 4
+            }
+
+
+            sooo when I write
+            Parents obj = new Child();
+
+            **** I can only access the *method 1* and *method 2* because reference variable that is onn LHS is going to determine what type of object it is
+
+            Child constructor is also called yet you can only use methods that are accessible by parent
+
+            Now to try to understand another scenario
+            class Parents {
+                method 1
+            }
+
+            class Child {
+                method 1
+            }
+
+            in this case when we do
+            Parents obj = new Child();
+
+            * it will call the method 1 of child class
+            * This is due to Dynamic PolyMorphism
+
+            Parent obj = new Child // This is also known as UPCASTING
+
+
+            what methods you can access -> Reference Variable
+            and if method with same name exist in both parent and child class then which one execute depends on what is on RHS here it is child hence child one
+
+-> PolyMorphism
+    - Compile Time PolyMorphism / Static Polymorphism
+        * Occurs due to Method Overloading
+
+    - Runtime Polymorphism / Dynamic PolyMorphism
+        * Occurs due to Method overriding
+        * How Overriding works
+            - Java will decide which method to run at Run time due to concept known as Dynamic method Dispatch
+        * Static methods cannot be Overridden
+            Overriding depends on Object
+            Static doesn't depend on any Object
+            Hence Static method cannot be overridden
+
+-> Encapsulation
+    - Wrapping up Implementation of Data Members & Method in a class
+    - Hide data into entities so it can be protected from outside world
+    - Implementors will decide actual logic for it, write the code and create classes etc
+    - I will use same example for Encapsulation and Abstract soo you understand it a better way
+    - ArrayList Logic is simple it has fixed size initially and then when we keep on adding data it make another array of double the size copy all the element in previous array and that's it.
+
+        Encapsulation deals with this actual logic.. Encapsulation is all about adding and writing the logic all this add, delete, size, getter and setter methods
+
+
+-> Abstraction
+    - Hiding Unnecessary Details and showing valuable information.
+    - Designer will say I need a get method, set method
+      he is not concerned how you do it, what you use
+    - ArrayList Logic is simple it has fixed size initially and then when we keep on adding data it make another array of double the size copy all the element in previous array and that's it.
+
+        Designer will use this method for their algorithms
+
